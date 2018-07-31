@@ -9,3 +9,6 @@ brouillon.ipynb
 .idea/*
 *.pyc
 
+
+# Datas
+wordcount_1_text/data/*
