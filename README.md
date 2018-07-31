@@ -4,6 +4,7 @@ Test de plusieurs projets avec la
 [librairie](https://spark.apache.org/docs/latest/api/python/index.html) 
 PySpark.
 
+
 ## Projets
 
 Une liste d'examples [ici](https://github.com/apache/spark/tree/master/examples/src/main/python).
@@ -27,6 +28,21 @@ Pour lancer l'app, se placer dans `pyspark/` :
 ```bash
 $ python wordcount_1_text/wordcount.py
 ```
+
+### TF-IDF
+
+> Calcul du Term Frequency - Inverse Document Frequency
+
+Télécharger le corpus
+```bash
+$ cd tf-idf/
+$ mkdir data
+$ cd data
+$ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+$ wget http://www.textfiles.com/etext/FICTION/callwild
+```
+
+A FAIRE EN BROADCAST
 
 ## Installations
 ### Prérequis

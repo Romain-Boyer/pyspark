@@ -12,3 +12,5 @@ brouillon.ipynb
 
 # Datas
 wordcount_1_text/data/*
+tf-idf/data/*
+tf-idf/temp/*
