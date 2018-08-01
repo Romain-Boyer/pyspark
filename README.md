@@ -1,7 +1,7 @@
 # Testing PySpark
 
 Test de plusieurs projets avec la 
-[librairie](https://spark.apache.org/docs/latest/api/python/index.html) 
+[librairie](https://spark.apache.org/docs/latest/index.html) 
 PySpark.
 
 
@@ -39,10 +39,19 @@ $ cd tf-idf/
 $ mkdir data
 $ cd data
 $ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
-$ wget http://www.textfiles.com/etext/FICTION/callwild
+$ wget http://www.textfiles.com/etext/FICTION/callwildwget http://www.textfiles.com/etext/FICTION/dracula
+$ wget http://www.textfiles.com/etext/FICTION/gulistan
+$ wget http://www.textfiles.com/etext/FICTION/tess10.txt
+$ wget http://www.textfiles.com/etext/FICTION/nabby10.txt
 ```
 
-A FAIRE EN BROADCAST
+Pour lancer le programme, une fois un corpus télécharger et mis dans `tf-idf/data/`, 
+se placer dans la racine du projet et lancer :
+```bash
+$ python tf-idf/tfidf_V2.py --display N
+```
+Avec `N` le nombre de mots à afficher dans la console.
+Si N n'est pas renseigné, il vaut automatiquement 10.
 
 ## Installations
 ### Prérequis
