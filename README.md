@@ -11,9 +11,12 @@ Une liste d'examples [ici](https://github.com/apache/spark/tree/master/examples/
 
 ### Estimation de Pi
 
+Objectif : lancer un calcul en parallèle. Vérifier que PySpark est bien installé.
 Par la méthode de Monte Carlo.
 
 ### Wordcount sur 1 seul texte
+
+Objectif : Lecture d'un texte, et calcul du wordcount
 
 Wordcount sur le texte Anna Karenina de Tolstoy disponible 
 [ici](http://www.textfiles.com/etext/FICTION/anna_karenina), et affichage des 10 mots les plus utilisés.
@@ -32,6 +35,8 @@ $ python wordcount_1_text/wordcount.py
 ### TF-IDF
 
 > Calcul du Term Frequency - Inverse Document Frequency
+
+Objectifs : Lecture d'un corpus de textes, et plus opérations sur ces textes.
 
 Télécharger le corpus
 ```bash
@@ -52,6 +57,18 @@ $ python tf-idf/tfidf_V2.py --display N
 ```
 Avec `N` le nombre de mots à afficher dans la console.
 Si N n'est pas renseigné, il vaut automatiquement 10.
+
+### Trees of Paris
+
+Objectif : s'entrainer avec du csv dans pyspark.
+
+Les données sont la : [opendata](https://opendata.paris.fr/explore/dataset/les-arbres/table/). 
+
+Calcul de la taille et frequence des arbres de Paris...
+
+```bash
+$ python tree_of_paris/trees.py
+```
 
 ## Installations
 ### Prérequis
