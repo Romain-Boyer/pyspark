@@ -70,6 +70,26 @@ Calcul de la taille et frequence des arbres de Paris...
 $ python tree_of_paris/trees.py
 ```
 
+### PageRank
+
+Calculate the PageRank score (with damping factor 0.85) for each user in the 
+Epinions who-trust-whom online social network : 
+`https://snap.stanford.edu/data/soc-Epinions1.html`.
+
+```bash
+$ python pagerank/pagerank.py
+```
+
+### PageRank
+
+Calculate the PageRank score (with damping factor 0.85) for each user in the 
+Epinions who-trust-whom online social network : 
+`https://snap.stanford.edu/data/soc-Epinions1.html`.
+
+```bash
+$ python pagerank/pagerank.py
+```
+
 ## Installations
 ### Prérequis
 
