@@ -107,3 +107,9 @@ Pour vérifier le nombre de coeurs qui sont utilisés :
 $ htop
 ````
 (un `brew install htop` peut être nécessaire).
+
+### Liens sympas
+
+1. RDD ou DF
+[Databricks](https://databricks.com/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html)
+[Video](https://databricks.com/session/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets)
