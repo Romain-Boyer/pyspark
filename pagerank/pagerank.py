@@ -1,5 +1,6 @@
 import os
 import re
+import time
 from operator import add
 
 import findspark
@@ -100,6 +101,7 @@ def _parse_users(row):
 
 if __name__ == '__main__':
 
+    t1 = time.time()
     spark = SparkSession.builder \
         .master('local') \
         .appName('PageRank') \
@@ -114,11 +116,11 @@ if __name__ == '__main__':
     print(f'Page rank initialized !')
     print(f"Il y a {n} utilisateurs différents présents sur ce graphe.\n")
 
-    N = 5
+    N = 8
     for i in range(N):
         pagerank_vector = iteration(transition_matrix, pagerank_vector, n, 0.80)
 
-    pagerank_vector.persist()
+    #pagerank_vector.persist()
     print(f'{N} iter done.')
 
     print('\nBest resultats :')
@@ -127,7 +129,8 @@ if __name__ == '__main__':
         print(f"ID : {k} with score of {v}")
 
     # Debuggage
-    input("\nFinish ?")
+    print(f'\nDone in {int(time.time() - t1)} seconds.')
+    input('OVER ?')
 
     spark.stop()
     print('\nSpark Session closed!')

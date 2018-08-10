@@ -1,5 +1,6 @@
 import os
 import re
+import time
 from operator import add
 
 import findspark
@@ -32,6 +33,7 @@ def _parse_users(row):
 
 if __name__ == '__main__':
 
+    t1 = time.time()
     beta = 0.8
 
     spark = SparkSession.builder \
@@ -72,7 +74,7 @@ if __name__ == '__main__':
         .map(lambda x: (x, 1 / n)) \
         .persist()
 
-    N = 10
+    N = 8
     for i in range(N):
         # Calcul de la premiere iter
         new_pagerank_vector = transition_matrix \
@@ -91,5 +93,6 @@ if __name__ == '__main__':
     for k, v in results:
         print(f"ID : {k} with score of {v}")
 
-    input('Finish it ?')
+    print(f'\nDone in {int(time.time() - t1)} seconds.')
+    input('OVER ?')
     spark.stop()
