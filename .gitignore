@@ -1,5 +1,8 @@
 # Spark
 spark-2.3.1-bin-hadoop2.7/*
+graph_install/*
+metastore_db/*
+derby.log
 
 # Jupyter notebook
 .ipynb_checkpoints/*

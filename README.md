@@ -108,6 +108,35 @@ $ htop
 ````
 (un `brew install htop` peut être nécessaire).
 
+Pour installer graphframes :
+````bash
+$ pip install "git+https://github.com/munro/graphframes.git@release-0.5.0#egg=graphframes&subdirectory=python"
+````
+
+Pour utiliser graphframes sur un jupyter notebook. Pas très propre, mais ça marche ...
+```bash
+$ mkdir ~/jupyter
+$ cd ~/jupyter
+$ wget https://github.com/graphframes/graphframes/archive/release-0.2.0.zip
+$ unzip release-0.2.0.zip
+$ cd graphframes-release-0.2.0
+$ build/sbt assembly
+$ cd ..
+
+# Copy necessary files to root level so we can start pyspark. 
+$ cp graphframes-release-0.2.0/target/scala-2.11/graphframes-release-0-2-0-assembly-0.2.0-spark2.0.jar .
+$ cp -r graphframes-release-0.2.0/python/graphframes .
+
+# Set environment to use Jupyter
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=notebook
+
+# Launch the jupyter server.
+$ pyspark --jars graphframes-release-0-2-0-assembly-0.2.0-spark2.0.jar
+```
+
+Autre lien qui a l'air bien : `https://www.datareply.co.uk/blog/2016/9/20/running-graph-analytics-with-spark-graphframes-a-simple-example`
+
 ### Liens sympas
 
 1. RDD ou DF
