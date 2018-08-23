@@ -142,3 +142,9 @@ Autre lien qui a l'air bien : `https://www.datareply.co.uk/blog/2016/9/20/runnin
 1. RDD ou DF
 [Databricks](https://databricks.com/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html)
 [Video](https://databricks.com/session/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets)
+
+2. MagicSpark
+
+For interactively working with remote Spark clusters through Livy, 
+a Spark REST server, in Jupyter notebooks.
+[SparkMagic Github](https://github.com/jupyter-incubator/sparkmagic)
