@@ -148,3 +148,11 @@ Autre lien qui a l'air bien : `https://www.datareply.co.uk/blog/2016/9/20/runnin
 For interactively working with remote Spark clusters through Livy, 
 a Spark REST server, in Jupyter notebooks.
 [SparkMagic Github](https://github.com/jupyter-incubator/sparkmagic)
+
+3. Deep Learning with pySpark
+[Favio Vasquez github](https://github.com/FavioVazquez/deep-learning-pyspark)
+
+4. OPTIMUS
+
+Optimus is the missing framework to profile, clean, process and do ML in a distributed fashion using Apache Spark(PySpark).
+[GitHub](https://github.com/ironmussa/Optimus)
