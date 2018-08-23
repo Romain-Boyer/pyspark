@@ -5,7 +5,7 @@ import time
 import findspark
 
 findspark.init()
-import pyspark
+from pyspark.sql import SparkSession
 
 PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -32,10 +32,16 @@ def rankContribution(uris, rank, beta, n):
     return newrank
 
 
-sc = pyspark.SparkContext(appName="PR")
+spark = SparkSession.builder \
+    .master('local[*]') \
+    .appName('PageRank') \
+    .getOrCreate()
 
 # 1 - Load the .txt
-page_links_rdd = sc.textFile(PATH_NETWORK).map(lambda r: parse_users(r))
+page_links_rdd = spark \
+    .read.text(PATH_NETWORK) \
+    .rdd.map(lambda r: r[0]) \
+    .map(lambda r: parse_users(r))
 
 # 2 - Create page_ranks_rdd
 page_ranks_rdd = page_links_rdd.flatMap(lambda x: (x[0], x[1])).distinct()
@@ -64,4 +70,4 @@ for l, s in result:
 
 print(f'\nDone in {int(time.time() - t1)} seconds.')
 input('OVER ?')
-sc.stop()
+spark.stop()
